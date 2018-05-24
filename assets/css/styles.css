@@ -1,0 +1,258 @@
+/*************************************************************************************************************************
+************************************ SIDEBAR STYLING*********************************************************************
+***********************************************************************************************************************/
+
+.sidebar[data-color="custom-grey"]:after,
+.off-canvas-sidebar[data-color="custom-grey"]:after {
+    background: #313541;
+}
+
+.sidebar[data-color="custom-grey"] .nav li.active > a:not([data-toggle="collapse"]),
+.off-canvas-sidebar[data-color="custom-grey"] .nav li.active > a:not([data-toggle="collapse"]) {
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar[data-color="custom-grey"] .nav li.active > a:not([data-toggle="collapse"]) i,
+.off-canvas-sidebar[data-color="custom-grey"] .nav li.active > a:not([data-toggle="collapse"]) i {
+    color: black;
+}
+
+.sidebar[data-color="custom-darkblue"]:after,
+.off-canvas-sidebar[data-color="custom-darkblue"]:after {
+    background: linear-gradient(to bottom, #0c2646 0%, #204065 60%, #2a5788 100%);
+}
+
+.sidebar .nav li > a,
+.off-canvas-sidebar .nav li > a {
+    margin: 10px 15px 0;
+    border-radius: 30px;
+    color: #FFF;
+    font-size: 12px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    /*font-size: 0.7142em;*/
+    padding: 10px 8px;
+    line-height: 1.625rem;
+}
+
+.sidebar[data-color="custom-darkblue"] .nav li.active > a:not([data-toggle="collapse"]),
+.off-canvas-sidebar[data-color="custom-darkblue"] .nav li.active > a:not([data-toggle="collapse"]) {
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sidebar[data-color="custom-darkblue"] .nav li.active > a:not([data-toggle="collapse"]) i,
+.off-canvas-sidebar[data-color="custom-darkblue"] .nav li.active > a:not([data-toggle="collapse"]) i {
+    color: black;
+}
+
+/********************** CUSTOM SIDEBAR *************************************************************/
+
+.custom-sidebar{
+    letter-spacing: +1px;
+}
+
+
+/*********************************************************************************************
+***********************************NAVIGATION BAR STYLING**************************************
+**********************************************************************************************/
+
+#new-dropdown  i{
+    color: #5b5b5b;
+}
+
+.new-dropdown-text{
+    font-size: 15px;
+}
+
+#new-dropdown .dropdown-item:hover{
+    cursor: pointer;
+}
+
+.new-notifications-count{
+    font-weight: bold;
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+    color: #F20000;
+}
+
+.account_dropdown{
+    cursor: pointer;
+}
+
+/********************************************************************************************
+*************************************USER PAGE STYLING***************************************
+********************************************************************************************/
+
+#user_name{
+    color: #f96332;
+}
+
+.user{
+    font-weight: bold;
+}
+
+.user:disabled{
+    background-color: #DCDCDC;
+    color: #111111;
+}
+
+.user_email:disabled{
+    background: #F20000;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.user_about:disabled{
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.user_about{
+    font-size: 14px;
+}
+
+#profileimage{
+    position: relative;
+}
+
+#changeprofile{
+    position: absolute;
+    bottom: 7.3%;
+    left: 42%;
+    height: 2rem;
+    width: 1rem;
+}
+
+#changeprofile i{
+    position: absolute;
+    left: 32%;
+    top: 30%;
+}
+
+@media(max-width: 720px){
+    #changeprofile{
+        left: 45%;
+    }
+}
+
+@media(min-width: 720px) and (max-width: 800px){
+    #changeprofile{
+        left: 46.3%;
+    }
+}
+
+/*******************************************************************************************************
+*************************************SHARE FORM STYLING*************************************************
+******************************************************************************************************/
+.share-form::placeholder{
+    color: #888;
+}
+
+#inputTime{
+    border-radius: 0;
+}
+
+/********************************************************************************************************************
+******************************************* GLOBAL CSS *************************************************************
+********************************************************************************************************************/
+
+.unselectable{
+    user-select: none;
+}
+
+.custom-outline{
+    font-weight: bold;
+    background: transparent;
+    font-size: 14px;
+    border: solid 2px;
+}
+
+.outline-success{
+    color: #18CE0F;
+    border-color:  #18CE0F;
+}
+
+.outline-success:hover, .outline-success:active, .outline-success:focus{
+    background: #18CE0F;
+    color: #FFF;
+}
+
+.outline-danger{
+    color: #F20000;
+    border-color:  #F20000;
+}
+
+.outline-danger:hover, .outline-danger:active, .outline-danger:focus{
+    background: #F20000;
+    color: #FFF;
+}
+
+.custom-select:focus {
+    box-shadow: none; 
+}
+
+.custom-form{
+    box-shadow: rgba(1, 1, 1, 1.8) 0 0 20px;
+    font-size: 20px;
+}
+
+.outline-primary{
+    color: #337AB7;
+    border-color:  #337AB7;
+}
+
+.outline-primary:hover, .outline-primary:active, .outline-primary:focus{
+    background: #337AB7;
+    color: #FFF;
+}
+
+.outline-custom-white{
+    color: #41464B;
+    border-color: #41464B;
+}
+
+.outline-custom-white:hover, .outline-custom-white:active, .outline-custom-white:focus{
+    background:#41464B;
+    color: #FFF;
+}
+
+.outline-custom-light-white{
+    color: #FFF;;
+    border-color: #FFF;
+}
+
+.outline-custom-light-white:hover, .outline-custom-light-white:active, .outline-custom-light-white:focus{
+    background: #FFF;
+    color: #41464B;
+}
+
+.outline-custom-blue{
+    color: #34C6D3;
+    border-color:  #34C6D3;
+}
+
+.outline-custom-blue:hover, .outline-custom-blue:active, .outline-custom-blue:focus{
+    background:#34C6D3;
+    color: #FFF;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: #868e96;
+    content: "/";
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+}
