@@ -207,7 +207,7 @@ demo = {
       var get_data;
         $.ajax({
             type: "POST",
-            url: "ajaxhelper.php",
+            url: "includes/process-ajax-request.php",
             data: "get_file_count=1"
         }).done(function(response){
             window.alert(response);

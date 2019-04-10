@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,6 @@
     $title = "Home | Study Drive";
     $page = "dashboard";
     include_once("includes/header.php");
-
 ?>
 
 <body class="">

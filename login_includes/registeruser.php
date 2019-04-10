@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <?php
     include_once("../includes/db.php");
     include_once("../functions.php");

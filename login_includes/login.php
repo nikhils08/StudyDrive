@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <head>
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 </head>

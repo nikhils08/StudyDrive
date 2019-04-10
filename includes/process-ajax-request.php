@@ -1,8 +1,57 @@
 <?php
 
+    session_start();
+
     include_once("db.php");
     include_once("../functions.php");
 
+    if( isset( $_POST['get_file_count'])){
+
+        $user_id = $_SESSION['user_id'];
+        //echo $user_id;
+        $query = "SELECT * FROM files WHERE created_by = $user_id AND parent_file_id IS NOT NULL";
+        $result_set = mysqli_query($connection, $query);
+        confirmQuery($result_set);
+        $datetime = "";
+        while($row = mysqli_fetch_assoc($result_set)){
+            extract($row);
+            $date = new DateTime();
+            date_default_timezone_set("Asia/Kolkata");
+            $today = date_format($date, "Y-m-d h:i:s");
+            $date1 = date_create($today);
+            $date2 = date_create($created_at);
+            $diff = date_diff($date1, $date2);
+            if($diff->days <= 7)
+            {
+                $datetime.= " " . $created_at;
+            }
+        }
+        $dates = explode(" ", $datetime);
+        $actualdates = array();
+        $count = array();
+        $i = 1;
+        foreach ($dates as $eachdate){
+
+            if($i%2==0){
+                $founddate = false;
+                foreach ($actualdates as $checkdate){
+                    if($checkdate == $eachdate){
+                        $founddate = true;
+                        break;
+                    } else{
+                        $founddate = false;
+                        continue;
+                    }
+                }
+                if($founddate == false)
+                    array_push($actualdates, $eachdate);
+            }
+            $i++;
+        }
+        foreach ($actualdates as $mydate){
+            echo $mydate . " ";
+        }
+    }
 
     if( isset( $_POST['file_info_id'] ) ) {
         $file_id = $_POST['file_info_id'];

@@ -17,7 +17,7 @@
             
             <div class="form-group">
                 <select name="shareselection" id="shareselection" class="form-control shareselection" style="width: 100%;">
-                    <option value="none" selected>How You want To share</option>
+                    <option value="none" selected disabled>How You want To share</option>
                     <option value="user_share">Share With User</option>
                     <option value="group_share">Share With Group</option>
                 </select>

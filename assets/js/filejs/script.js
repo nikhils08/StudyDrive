@@ -33,19 +33,19 @@ $(function () {
         } else{
             var parent_file_id=$("#file_id").text();
 
-            window.alert(file.name);
+            //window.alert(file.name);
 
 
             //CHECK FILE ALREDY EXISTS OR NOT
             $.get("ajaxhelper.php?task=fileexists&parent_file_id="+parent_file_id+"&file_name="+file.name,function(data){
                 str=JSON.stringify(data);
-                window.alert(str);
+                //window.alert(str);
                 if(str.includes('true')==true){
                     /*SWALL*/
-                    window.alert("same name");
+                    //window.alert("same name");
                     location.reload();
                 }else{
-                    window.alert("file was selected");
+                    //window.alert("file was selected");
                     uploadFile(file);/*ACTUAL TASK*/
                 }
             });
@@ -96,13 +96,13 @@ $(function () {
             $.get("ajaxhelper.php?task=fileexists&parent_file_id="+parent_file_id+"&file_name="+folderName,function(data){
 
                 str=JSON.stringify(data);
-                window.alert(str);
+                //window.alert(str);
                 if(str.includes('true')==true){
                     /*SWALL*/
-                    window.alert("same name");
+                    //window.alert("same name");
                     location.reload();
                 }else{
-                    window.alert("Folder selected "+files.length);
+                    //window.alert("Folder selected "+files.length);
                     uploadFolder(files);/*ACTUAL TASK*/
                 }
             });
@@ -152,7 +152,7 @@ $(function () {
             //window.alert("The value of data" + str);
             if (str.includes('true') == true) {
                // window.alert("file Uploaded as it was already there");
-                window.alert("File Upload Complete")
+                //window.alert("File Upload Complete")
                 location.reload();
             } else {
                 $("#actionForm").attr("action", "mydrive.php?file_id=" + parent_file_id + "&fileHash=" + hashStr);
@@ -239,7 +239,7 @@ $(function () {
                 contentType: false
             }).done(function (data) {
                 //window.alert("AJAX DONE " + data);
-                window.alert("Folder Upload Completed");
+                //window.alert("Folder Upload Completed");
                 location.reload();
             })
 
@@ -281,6 +281,5 @@ $(function () {
     }
 
     /*END OF GLOBAL SECTION*/
-
 
 });

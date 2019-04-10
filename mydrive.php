@@ -151,7 +151,9 @@
                                                 <?php
                                             $query="SELECT * FROM files WHERE parent_file_id=$get_file_id and deleted=0 ORDER BY isdirectory DESC";
                                             $all_files_query=mysqli_query($connection,$query);
-                                            confirmQuery($all_files_query);
+
+                                            
+                                                confirmQuery($all_files_query);
 
                                             while($row=mysqli_fetch_assoc($all_files_query)){
 

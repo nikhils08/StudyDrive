@@ -68,7 +68,7 @@
         
                 $subject ="Study Drive Change Password";
         
-                $body = "Please Click the Link below to reset password<br> <a href = 'http://localhost/studyshare/ui/reset.php?email=$email&token=$token'>Reset Password</a>";
+                $body = "Please Click the Link below to reset password<br> <a href = 'https://studydrivejb.000webhostapp.com/reset.php?email=$email&token=$token'>Reset Password</a>";
         
                 mail($to, $subject, $body, $headers);
                 
